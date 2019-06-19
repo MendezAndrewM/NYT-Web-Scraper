@@ -1,4 +1,9 @@
-const queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?&api-key=qL4fYopCYBypWudl3e9ZCXzoQLVwiflm&q=ducks" 
+
+
+
+
+const search = $('')
+const queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?&api-key=qL4fYopCYBypWudl3e9ZCXzoQLVwiflm&q=" + search 
 
 $.ajax({
     url: queryURL,
@@ -8,6 +13,8 @@ $.ajax({
     console.log(response)
     
     const results = response.response.docs
+    const listResults = $('#results')
+
 
   })
 
