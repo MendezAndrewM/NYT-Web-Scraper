@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .header {
+            width: 90vw;
+            margin: 0 auto 3rem;
+            text-align: center;
+            background: rgb(51, 51, 129);
+            border-bottom-left-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+        }
+
+        .title {
+            line-height: 3.5;
+            color: #fff;
+            font-size: 4rem;
+        }
+
+        .search-body,
+        .results-body {
+            width: 90vw;
+            margin: 0 auto; 
+            border-left: .1rem rgb(51, 51, 129) solid;
+            border-right: .1rem rgb(51, 51, 129) solid;
+            border-bottom: .1rem rgb(51, 51, 129) solid;
+
+            border-radius: .25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .results-body {
+            height: 50vh;
+        }
+
+        .param {
+            background: rgb(51, 51, 129);
+            color: #fff;
+            padding: .5rem;
+            border-top-left-radius: .125rem;
+            border-top-right-radius: .125rem;
+        }
+
+        .input-box {
+            display: block;
+            width: 100%;
+            padding: .25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        form {
+            padding: 1rem;
+        }
+
+        .btn {
+            padding: .5rem .75rem;
+            border: none;
+            background-color: rgb(224, 221, 221);
+            transition: .5s all ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: rgb(56, 56, 56);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">New York Times Search</h1>
+    </header>
+
+    <section class="search-body">
+        <p class="param">Search Parameters</p>
+        <form>
+            <label for="search-term">Search Term: </label>
+            <input class="input-box" type="text" name="search-term" id="term">
+
+            <label for="search-record-count">Number Of Records To Retrieve: </label>
+            <select class="input-box" name="search-record-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="start-year">Start Year (optional): </label>
+            <input class="input-box" type="text" name="start-year" id="start-year">
+            
+            <label for="end-year">End Year (optional): </label>
+            <input class="input-box" type="text" name="end-year" id="end-year">
+
+            <button type="submit" class="search btn">Search</button>
+            <button type="reset" class="clear-results btn">Clear Results</button>
+        </form>
+    </section>
+    <section class="results-body">
+        <p class="param">Top Articles</p>
+
+        <div id="results">
+
+            
+        </div>
+    
+
+    </section>
+</body>
+</html>
